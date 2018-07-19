@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		899C5CE4304E286E4EE88048 /* Pods_BarcodeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4061DAC808B44FEB4774473 /* Pods_BarcodeDemo.framework */; };
 		DC09DE7620E51D2D00679BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09DE7520E51D2D00679BBB /* AppDelegate.swift */; };
 		DC09DE7820E51D2D00679BBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09DE7720E51D2D00679BBB /* ViewController.swift */; };
 		DC09DE7B20E51D2D00679BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC09DE7920E51D2D00679BBB /* Main.storyboard */; };
 		DC09DE7D20E51D3700679BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC09DE7C20E51D3700679BBB /* Assets.xcassets */; };
 		DC09DE8020E51D3700679BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC09DE7E20E51D3700679BBB /* LaunchScreen.storyboard */; };
+		DC5DA10B20EACC6000BC986F /* BarcodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DA10A20EACC6000BC986F /* BarcodeScanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87309FA7AA1F78C22C68D991 /* Pods-BarcodeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeDemo/Pods-BarcodeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A4061DAC808B44FEB4774473 /* Pods_BarcodeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E4544A1042ABAC046AA1D3 /* Pods-BarcodeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeDemo/Pods-BarcodeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DC09DE7220E51D2D00679BBB /* BarcodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC09DE7520E51D2D00679BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC09DE7720E51D2D00679BBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		DC09DE7C20E51D3700679BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC09DE7F20E51D3700679BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC09DE8120E51D3700679BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5DA10A20EACC6000BC986F /* BarcodeScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899C5CE4304E286E4EE88048 /* Pods_BarcodeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96FBF53DE94A4A81F8277A89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4061DAC808B44FEB4774473 /* Pods_BarcodeDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC09DE6920E51D2D00679BBB = {
 			isa = PBXGroup;
 			children = (
 				DC09DE7420E51D2D00679BBB /* BarcodeDemo */,
 				DC09DE7320E51D2D00679BBB /* Products */,
+				F944FA2321793CE628EC40B0 /* Pods */,
+				96FBF53DE94A4A81F8277A89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +77,18 @@
 				DC09DE7C20E51D3700679BBB /* Assets.xcassets */,
 				DC09DE7E20E51D3700679BBB /* LaunchScreen.storyboard */,
 				DC09DE8120E51D3700679BBB /* Info.plist */,
+				DC5DA10A20EACC6000BC986F /* BarcodeScanViewController.swift */,
 			);
 			path = BarcodeDemo;
+			sourceTree = "<group>";
+		};
+		F944FA2321793CE628EC40B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87309FA7AA1F78C22C68D991 /* Pods-BarcodeDemo.debug.xcconfig */,
+				B7E4544A1042ABAC046AA1D3 /* Pods-BarcodeDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC09DE8420E51D3700679BBB /* Build configuration list for PBXNativeTarget "BarcodeDemo" */;
 			buildPhases = (
+				950D0084DCFAE45227CB606E /* [CP] Check Pods Manifest.lock */,
 				DC09DE6E20E51D2D00679BBB /* Sources */,
 				DC09DE6F20E51D2D00679BBB /* Frameworks */,
 				DC09DE7020E51D2D00679BBB /* Resources */,
+				3010761491CDE9F5303D0BDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +159,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3010761491CDE9F5303D0BDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BarcodeDemo/Pods-BarcodeDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarcodeDemo/Pods-BarcodeDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		950D0084DCFAE45227CB606E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarcodeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC09DE6E20E51D2D00679BBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5DA10B20EACC6000BC986F /* BarcodeScanViewController.swift in Sources */,
 				DC09DE7820E51D2D00679BBB /* ViewController.swift in Sources */,
 				DC09DE7620E51D2D00679BBB /* AppDelegate.swift in Sources */,
 			);
@@ -278,10 +347,11 @@
 		};
 		DC09DE8520E51D3700679BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87309FA7AA1F78C22C68D991 /* Pods-BarcodeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z5QZ4DT42W;
+				DEVELOPMENT_TEAM = MZ982Z982H;
 				INFOPLIST_FILE = BarcodeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,10 +366,11 @@
 		};
 		DC09DE8620E51D3700679BBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E4544A1042ABAC046AA1D3 /* Pods-BarcodeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z5QZ4DT42W;
+				DEVELOPMENT_TEAM = MZ982Z982H;
 				INFOPLIST_FILE = BarcodeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

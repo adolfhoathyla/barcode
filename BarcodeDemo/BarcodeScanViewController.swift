@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import BarcodeScanner
 
 class BarcodeScanViewController: UIViewController {
 
+    let barcodeViewController = BarcodeScannerViewController()
+    
+    var didReadCode: ((_ code: String) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configBarcode()
+        presentBarcode()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +26,20 @@ class BarcodeScanViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - aux methods
+    private func presentBarcode() {
+        self.view.addSubview(barcodeViewController.view)
+        self.addChildViewController(barcodeViewController)
+        barcodeViewController.didMove(toParentViewController: self)
+    }
+    
+    private func configBarcode() {
+        barcodeViewController.codeDelegate = self
+        barcodeViewController.errorDelegate = self
+        
+        barcodeViewController.cameraViewController.barCodeFocusViewType = .oneDimension
+        barcodeViewController.view.backgroundColor = UIColor.white
+    }
 
     /*
     // MARK: - Navigation
@@ -32,4 +51,24 @@ class BarcodeScanViewController: UIViewController {
     }
     */
 
+}
+
+
+extension BarcodeScanViewController: BarcodeScannerCodeDelegate {
+    public func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+        print(code)
+        if let didReadCode = self.didReadCode {
+            didReadCode(code)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0, execute: {
+            controller.reset(animated: true)
+        })
+    }
+}
+
+
+extension BarcodeScanViewController: BarcodeScannerErrorDelegate {
+    func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
+        print(error)
+    }
 }
